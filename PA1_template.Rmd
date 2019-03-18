@@ -27,7 +27,7 @@ sum_steps <- with(data,tapply(steps,date,sum,na.rm=TRUE))
 ```{r sum_steps, echo=FALSE}
 hist(sum_steps, xlab = "Total steps", main = "Total steps per day", col="grey")
 ```
-From the sum of all steps per day, we can easily calculate the mean and nedian steps per day.
+From the sum of all steps per day, we can easily calculate the mean and median steps per day.
 ```{r}
 print(mean_steps <- mean(sum_steps))
 print(median_steps <- median(sum_steps))
@@ -76,7 +76,7 @@ print(median_steps_avg <- median(sum_steps_avg))
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-Before we can ploit, we need to divide the data into weekday data and weekend data.
+Before we can plot, we need to divide the data into weekday data and weekend data.
 ```{r}
 weekday.or.weekend <- function(date) {
     day <- weekdays(date)

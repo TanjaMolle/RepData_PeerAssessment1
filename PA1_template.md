@@ -13,7 +13,7 @@ steps per day is calculated for each day.
     sum_steps <- with(data,tapply(steps,date,sum,na.rm=TRUE))
 
 ![](PA1_template_files/figure-markdown_strict/sum_steps-1.png) From the
-sum of all steps per day, we can easily calculate the mean and nedian
+sum of all steps per day, we can easily calculate the mean and median
 steps per day.
 
     print(mean_steps <- mean(sum_steps))
@@ -82,7 +82,7 @@ instead of very close.
 Are there differences in activity patterns between weekdays and weekends?
 -------------------------------------------------------------------------
 
-Before we can ploit, we need to divide the data into weekday data and
+Before we can plot, we need to divide the data into weekday data and
 weekend data.
 
     weekday.or.weekend <- function(date) {
