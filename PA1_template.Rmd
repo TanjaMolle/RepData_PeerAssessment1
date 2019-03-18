@@ -2,10 +2,10 @@
 title: "Assignment 1 for Reproducible research"
 author: "Tanja Molle"
 date: "17 März 2019"
-output: html_document
+output: md_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup,include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
 ```
@@ -24,7 +24,7 @@ To show the total number of steps per day in a histogram, the sum of all steps p
 sum_steps <- with(data,tapply(steps,date,sum,na.rm=TRUE))
 ```
 
-```{r sum_steps, echo=FALSE}
+```{r sum_steps,echo=FALSE}
 hist(sum_steps, xlab = "Total steps", main = "Total steps per day", col="grey")
 ```
 From the sum of all steps per day, we can easily calculate the mean and median steps per day.
@@ -39,7 +39,7 @@ For this task we need to calculate the averager steps per interval.
 avg_steps <- with(data, tapply(steps,interval,mean,na.rm=TRUE))
 ```
 
-```{r avg_steps, echo=FALSE}
+```{r avg_steps,echo=FALSE}
 plot(avg_steps, main = "Average steps per interval", xlab = "intervals", ylab = "Average steps",type="l")
 ```
 
